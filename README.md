@@ -1,16 +1,46 @@
-# React + Vite
+# Coin Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web app for tracking cryptocurrency prices, built with React and Vite.
 
-Currently, two official plugins are available:
+> **Status:** early development. The project has been set up with its tools and libraries, but the app itself hasn't been built yet.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech stack
 
-## React Compiler
+- [React 19](https://react.dev): UI
+- [Vite](https://vite.dev): dev server and build tool
+- [Tailwind CSS v4](https://tailwindcss.com): styling, through the `@tailwindcss/vite` plugin
+- [Redux](https://redux.js.org) + [React Redux](https://react-redux.js.org): app state
+- [React Router](https://reactrouter.com): routing between pages
+- [ESLint](https://eslint.org): linting
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting started
 
-## Expanding the ESLint configuration
+You need [Node.js](https://nodejs.org) and npm installed.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+Then open the local URL that Vite prints (usually http://localhost:5173).
+
+## Scripts
+
+| Command           | What it does                                 |
+| ----------------- | -------------------------------------------- |
+| `npm run dev`     | Starts the dev server with hot reload        |
+| `npm run build`   | Builds the app for production into `dist/`   |
+| `npm run preview` | Serves the production build locally          |
+| `npm run lint`    | Checks the code with ESLint                  |
+
+## Project structure
+
+```
+public/          Static files served as-is (favicon, icons)
+src/
+  main.jsx       App entry point; mounts <App /> into #root
+  index.css      Global styles and the Tailwind import
+  assets/        Images imported from code
+index.html       HTML shell loaded by Vite
+vite.config.js   Vite config (React + Tailwind plugins)
+```
